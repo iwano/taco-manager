@@ -1,7 +1,14 @@
 %h1.label
   {{name}}
 
-{{#each s in taco_rules}}
-%h1
-  {{s.description}}
-{{/each}}
+.well
+  {{#each taco_rules}}
+  %p
+    {{description}}
+  {{/each}}
+
+.well
+  {{#each users}}
+  %p
+    {{name}}
+  {{/each}}
