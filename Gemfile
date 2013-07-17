@@ -11,10 +11,10 @@ gem 'jquery-rails', '~>2.2.0'
 gem "json_spec"
 gem 'haml_assets'
 gem 'haml-rails'
-gem 'pg'
 gem 'pry'
 gem 'rabl'
 gem 'rails', '4.0.0'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
@@ -33,7 +33,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
