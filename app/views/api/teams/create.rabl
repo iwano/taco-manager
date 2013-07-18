@@ -11,6 +11,4 @@ child @team => :team do
 
 end
 
-child(:taco_rules) { attributes :id, :description }
-
 

@@ -1,6 +1,6 @@
 attributes :id, :name
 
-node(:taco_rules_ids) do |t|
+node(:taco_rule_ids) do |t|
   t.taco_rules.map{ |r| r.id  }
 end
 

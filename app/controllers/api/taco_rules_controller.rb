@@ -13,6 +13,14 @@ class Api::TacoRulesController < Api::BaseController
     render status: :ok, nothing: true
   end
 
+  def index
+    if params[:ids]
+      @taco_rules = TacoRule.find(params[:ids].split(','))
+    else
+      @taco_rules = TacoRule.all
+    end
+  end
+
   private
 
   def taco_rules_params
