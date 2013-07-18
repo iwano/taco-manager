@@ -7,9 +7,9 @@ class Api::BaseController < ApplicationController
     respond_with_error(exception, 404)
   end
 
-  rescue_from ActiveRecord::RecordInvalid do |exception|
-    respond_with_error(exception, 422, errors: exception.record.errors.messages)
-  end
+  # rescue_from ActiveRecord::RecordInvalid do |exception|
+  #   respond_with_error(exception, 422, errors: exception.record.errors.messages)
+  # end
 
   rescue_from RuntimeError do |exception|
     respond_with_error(exception, 500)
