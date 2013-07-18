@@ -1,5 +1,4 @@
 TacoManager.TeamController = Ember.ObjectController.extend(
-
   createTacoRule: ->
     description = @get("newDescription")
     return  unless description.trim()

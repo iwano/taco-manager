@@ -9,8 +9,8 @@ class Api::TacoRulesController < Api::BaseController
   end
 
   def update
-    TacoRule.find(params[:id]).update taco_rules_params
-    render status: :ok, nothing: true
+    @taco_rule = TacoRule.find(params[:id])
+    @taco_rule.update taco_rules_params
   end
 
   def index
