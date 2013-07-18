@@ -1,0 +1,26 @@
+@import '../base/variables.css.scss';
+
+.tag-info{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: $red-color;
+  content: "Example";
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+
+  -webkit-border-radius: 4px 0 4px 0;
+  -moz-border-radius: 4px 0 4px 0;
+  border-radius: 4px 0 4px 0;
+}
+
+.well{
+  position: relative;
+}
+
+.navbar a.brand{
+  color: $red-color;
+}

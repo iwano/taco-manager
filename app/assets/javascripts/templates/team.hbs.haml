@@ -2,13 +2,23 @@
   {{name}}
 
 .well
-  {{#each taco_rules}}
-  %p
-    {{description}}
+  .tag-info
+    Rules
+  %ol
+    {{#each taco_rules}}
+    %li
+      {{description}}
   {{/each}}
+  %form.form-inline
+    {{view Ember.TextField id="new-taco-rule-description" placeholder="Rule's description" valueBinding="newDescription" action="createTacoRule"}}
+    <button class='btn' id='new-taco-rule-btn' {{action createTacoRule}}> Create Taco Rule</button>
+
 
 .well
-  {{#each users}}
-  %p
-    {{name}}
+  .tag-info
+    Users
+  %ul
+    {{#each users}}
+    %li
+      {{name}}
   {{/each}}

@@ -1,3 +1,5 @@
-object @taco_rule
+child @taco_rule => :taco_rule do
 
-attributes :team_id, :description
+  attributes :team_id, :description
+
+end
