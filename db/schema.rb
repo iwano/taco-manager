@@ -17,25 +17,33 @@ ActiveRecord::Schema.define(version: 20130712033500) do
   enable_extension "plpgsql"
 
   create_table "taco_points", force: true do |t|
-    t.integer "user_id"
-    t.integer "taco_rule_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "taco_rule_id"
   end
 
   create_table "taco_rules", force: true do |t|
-    t.string  "description"
-    t.integer "team_id"
+    t.string   "description"
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "teams", force: true do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string  "name"
-    t.integer "team_id"
-    t.integer "current_tacopoints", default: 0
-    t.integer "sponsor_count",      default: 0
-    t.integer "taco_points_count",  default: 0, null: false
+    t.string   "name"
+    t.integer  "team_id"
+    t.integer  "current_tacopoints", default: 0
+    t.integer  "sponsor_count",      default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "taco_points_count",  default: 0, null: false
   end
 
 end

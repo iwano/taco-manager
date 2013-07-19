@@ -24,3 +24,9 @@
 .navbar a.brand{
   color: $red-color;
 }
+.tag-info-bottom{
+  @extend .tag-info;
+  bottom: -1px;
+  top:auto;
+}
+

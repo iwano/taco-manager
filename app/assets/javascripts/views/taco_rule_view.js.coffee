@@ -1,4 +1,5 @@
 TacoManager.EditTacoRuleView = Ember.TextField.extend(
+
   classNames: ["editing"]
 
   insertNewline: ->
@@ -9,4 +10,5 @@ TacoManager.EditTacoRuleView = Ember.TextField.extend(
 
   didInsertElement: ->
     @$().focus()
+
 )

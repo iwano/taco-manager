@@ -8,4 +8,5 @@ TacoManager.TeamsController = Ember.ArrayController.extend(
     )
     @set "newName", ""
     team.save()
+
 )

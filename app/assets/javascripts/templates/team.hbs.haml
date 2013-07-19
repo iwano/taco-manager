@@ -17,10 +17,16 @@
   %form.form-inline
     {{view Ember.TextField id="new-taco-rule-description" placeholder="Rule's description" valueBinding="newDescription" action="createTacoRule"}}
     <button class='btn' id='new-taco-rule-btn' {{action createTacoRule}}> Create Taco Rule</button>
+  .tag-info-bottom
+    Last Updated:
+    %strong
+      {{fromNow lastUpdatedAt}}
 
 .well
   .tag-info
-    Users
+    %strong
+      {{usersCount}}
+    users
   %ul
     {{#each users}}
     %li

@@ -1,4 +1,5 @@
 TacoManager.TacoRuleController = Ember.ObjectController.extend(
+
   isEditing: false
 
   editTacoRule: ->
@@ -7,4 +8,5 @@ TacoManager.TacoRuleController = Ember.ObjectController.extend(
   acceptChanges: ->
     @set('isEditing', false)
     @get('model').save() unless @get('model').get('isSaving')
+
 )

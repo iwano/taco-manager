@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
     	t.integer :current_tacopoints, default: 0
     	t.integer :total_tacopoints, default: 0
     	t.integer :sponsor_count, default: 0
+      t.timestamps
     end
   end
 end
