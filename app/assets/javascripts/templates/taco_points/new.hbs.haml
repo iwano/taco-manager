@@ -1,0 +1,15 @@
+.modal-header
+  <div class="button close btn-dismiss" {{action cancel content}}>x</div>
+%h2.app-icon-large Post
+.modal-body
+  .control-group
+    %label.control-label{:for => "post-title"} Title
+    .controls
+      {{view Em.TextField elementId='post-title' valueBinding='content.title'}}
+  .control-group
+    %label.control-label{:for => "post-body"} Body
+    .controls
+      {{view Em.TextField elementId='post-body' valueBinding='content.body'}}
+.modal-footer
+  <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
+  <button class="btn btn-success" type="submit" {{action submit content}}>Save</button>

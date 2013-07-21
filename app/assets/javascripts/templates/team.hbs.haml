@@ -13,6 +13,8 @@
     <label {{action "editTacoRule" on="doubleClick"}} class='editable'/>{{description}}
     {{/if}}
     </li>
+    {{else}}
+    This team has no rules yet
     {{/each}}
   %form.form-inline
     {{view Ember.TextField id="new-taco-rule-description" placeholder="Rule's description" valueBinding="newDescription" action="createTacoRule"}}
@@ -33,5 +35,10 @@
       %span.badge.badge-warning.taco-points-count
         {{current_tacopoints}}
       {{name}}
+      {{#linkTo 'taco_points.new' ../this}}+1{{/linkTo}}
       <span class="add-taco-point" {{action "showAddTacoPoint" on="click"}}>+1</span>
+    {{else}}
+    Nobody has enrolled to this team yet
     {{/each}}
+
+{{outlet}}

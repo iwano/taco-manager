@@ -9,6 +9,8 @@
         {{#each model}}
         %li
           {{#linkTo 'team' this}}{{name}}{{/linkTo}}
+        {{else}}
+        You haven't enrolled to any team yet
         {{/each}}
     %section#team-details.span9
       {{outlet}}
