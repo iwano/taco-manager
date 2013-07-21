@@ -1,0 +1,46 @@
+#team-users-list{
+  margin: 0;
+  list-style-type: none;
+  li{
+    padding: 5px 0;
+    position: relative;
+    &:hover{
+      background: #A7A69B;
+      color: #fff;
+    }
+    &:hover .add-taco-point{
+      display: inline;
+    }
+    &:hover .taco-points-count{
+      margin-right: 35px;
+    }
+  }
+  .badge{
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .add-taco-point{
+    background: #D64826;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+    padding: 0 2px;
+    position: absolute;
+    left: 32px;
+    &:hover{
+      background-color: #FF562D;
+      -webkit-box-shadow: 0 0 10px #FF7E6A;
+      -moz-box-shadow: 0 0 10px #FF7E6A;
+      -o-box-shadow: 0 0 10px #FF7E6A;
+      -ms-box-shadow: 0 0 10px #FF7E6A;
+    }
+  }
+  .taco-points-count{
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -ms-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+  }
+}

@@ -27,8 +27,11 @@
     %strong
       {{usersCount}}
     users
-  %ul
-    {{#each users}}
+  %ul#team-users-list
+    {{#each users itemController="user"}}
     %li
+      %span.badge.badge-warning.taco-points-count
+        {{current_tacopoints}}
       {{name}}
-  {{/each}}
+      <span class="add-taco-point" {{action "showAddTacoPoint" on="click"}}>+1</span>
+    {{/each}}
