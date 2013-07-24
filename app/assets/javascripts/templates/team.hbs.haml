@@ -35,10 +35,10 @@
       %span.badge.badge-warning.taco-points-count
         {{current_tacopoints}}
       {{name}}
-      {{#linkTo 'taco_points.new' ../this}}+1{{/linkTo}}
-      <span class="add-taco-point" {{action "showAddTacoPoint" on="click"}}>+1</span>
+      <span class="add-taco-point" {{action "showTacoPointForm" on="click"}}>+1</span>
+
     {{else}}
     Nobody has enrolled to this team yet
     {{/each}}
 
-{{outlet}}
+{{view TacoManager.TacoPointsNewView}}

@@ -6,9 +6,6 @@ TacoManager.Router.map ->
   @resource "teams", ->
     @resource "team",
       path: ':team_id'
-    , ->
-      @resource "taco_points", ->
-        @route 'new'
 
 
 TacoManager.UsersRoute = Ember.Route.extend(
@@ -21,8 +18,3 @@ TacoManager.TeamsRoute = Ember.Route.extend(
     TacoManager.Team.find()
 )
 
-TacoManager.TacoPointsNewRoute = Ember.Route.extend(
-  model: ->
-    TacoManager.TacoRule.createRecord()
-
-)
