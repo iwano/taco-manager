@@ -30,15 +30,4 @@
       {{usersCount}}
     users
   %ul#team-users-list
-    {{#each users itemController="user"}}
-    %li
-      %span.badge.badge-warning.taco-points-count
-        {{current_tacopoints}}
-      {{name}}
-      <span class="add-taco-point" {{action "showTacoPointForm" on="click"}}>+1</span>
-
-    {{else}}
-    Nobody has enrolled to this team yet
-    {{/each}}
-
-{{view TacoManager.TacoPointsNewView}}
+    {{view TacoManager.UsersView viewName="usersView" itemBinding="users"}}

@@ -1,0 +1,12 @@
+{{#each user in users itemController="user"}}
+%li
+  %span.badge.badge-warning.taco-points-count
+    {{current_tacopoints}}
+  {{name}}
+  <span class="add-taco-point" {{action "showAddTacoPointModal" on="click" target="view" }}>+1</span>
+
+{{else}}
+Nobody has enrolled to this team yet
+{{/each}}
+
+{{view TacoManager.MyContainerView viewName="myContainerView"}}

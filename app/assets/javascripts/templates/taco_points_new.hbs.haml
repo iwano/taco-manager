@@ -1,11 +1,12 @@
 .modal-header
-  iwano
-%h2.app-icon-large Post
+  Add a Taco Point
+%h2.app-icon-large What did this bastard do?
 .modal-body
   .control-group
-    %label.control-label{:for => "post-title"} Title
-    .controls
-      iwano
+    %label.control-label {{name}}
+    {{#each users}}
+    {{name}}
+    {{/each}}
   .control-group
     %label.control-label{:for => "post-body"} Body
     .controls
