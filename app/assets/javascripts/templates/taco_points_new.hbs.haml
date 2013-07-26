@@ -1,16 +1,18 @@
 .modal-header
-  Add a Taco Point
-%h2.app-icon-large What did this bastard do?
-.modal-body
-  .control-group
-    %label.control-label {{name}}
-    {{#each users}}
+  %h2
     {{name}}
+.modal-body
+  Add a
+  %strong
+    Taco Point
+  to
+  %span.label.label-info.small
+    {{user.name}}
+  %h3.app-icon-large What did this bastard do?
+  %select
+    {{#each taco_rules}}
+    %option {{description}}
     {{/each}}
-  .control-group
-    %label.control-label{:for => "post-body"} Body
-    .controls
-      iwano
 .modal-footer
-  iwano
-  iwano
+  <button class='btn btn-danger' {{action cancelTacoPoint target="view"}}> Cancel</button>
+  <button class='btn btn-success' id='add-taco-point' {{action addTacoRule target="view"}}> Add Taco Point</button>

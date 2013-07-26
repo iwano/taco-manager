@@ -3,7 +3,7 @@
   %span.badge.badge-warning.taco-points-count
     {{current_tacopoints}}
   {{name}}
-  <span class="add-taco-point" {{action "showAddTacoPointModal" on="click" target="view" }}>+1</span>
+  <span class="add-taco-point" {{action 'onClick' user target="view" }} {{bindAttr value="user.id"}}>+1</span>
 
 {{else}}
 Nobody has enrolled to this team yet

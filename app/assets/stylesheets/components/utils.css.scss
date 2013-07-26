@@ -24,9 +24,15 @@
 .navbar a.brand{
   color: $red-color;
 }
+
 .tag-info-bottom{
   @extend .tag-info;
   bottom: -1px;
   top:auto;
+}
+
+span.label.label-info.small{
+  font-size: 13px;
+  line-height: 21px;
 }
 

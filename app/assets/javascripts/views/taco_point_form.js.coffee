@@ -6,4 +6,5 @@ TacoManager.TacoPointForm = Em.View.extend(
     @$().modal 'show'
   willDestroyElement: ->
     @$().modal 'hide'
+
 )
