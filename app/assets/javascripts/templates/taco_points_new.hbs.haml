@@ -11,8 +11,8 @@
   %h3.app-icon-large What did this bastard do?
   %select
     {{#each taco_rules}}
-    %option {{description}}
+    <option {{bindAttr value="id"}}>{{description}}</option>
     {{/each}}
 .modal-footer
   <button class='btn btn-danger' {{action cancelTacoPoint target="view"}}> Cancel</button>
-  <button class='btn btn-success' id='add-taco-point' {{action addTacoRule target="view"}}> Add Taco Point</button>
+  <button class='btn btn-success' id='add-taco-point' {{action addTacoRule target="controller"}}> Add Taco Point</button>

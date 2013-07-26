@@ -8,7 +8,4 @@ TacoManager.UsersView = Em.View.extend(
     newView = TacoManager.TacoPointForm.create()
     @get("myContainerView").pushObject(newView)
 
-  cancelTacoPoint: ->
-    @get("myContainerView").clearView()
-
 )

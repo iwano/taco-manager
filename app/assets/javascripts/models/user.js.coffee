@@ -5,5 +5,6 @@ TacoManager.User = DS.Model.extend({
   sponsor_count:      DS.attr('number')
   taco_points_count:  DS.attr('number')
   team:               DS.belongsTo('TacoManager.Team')
+  taco_points:        DS.hasMany('TacoManager.TacoPoint')
 
 });

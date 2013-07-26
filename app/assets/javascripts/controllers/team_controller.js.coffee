@@ -1,6 +1,8 @@
 TacoManager.TeamController = Ember.ObjectController.extend(
 
-  user: ''
+  user: null
+
+  taco_rule: null
 
   createTacoRule: ->
     description = @get("newDescription")
@@ -33,5 +35,11 @@ TacoManager.TeamController = Ember.ObjectController.extend(
     count = this.get('usersCount')
     count == 1 ? 'user' : 'users'
   ).property('usersCount')
+
+  addTacoRule: ->
+    taco_point = TacoManager.TacoPoint.createRecord(
+      user: @user
+    )
+    taco_point.save()
 
 )
