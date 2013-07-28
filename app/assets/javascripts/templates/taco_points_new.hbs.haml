@@ -9,10 +9,7 @@
   %span.label.label-info.small
     {{user.name}}
   %h3.app-icon-large What did this bastard do?
-  %select
-    {{#each taco_rules}}
-    <option {{bindAttr value="id"}}>{{description}}</option>
-    {{/each}}
+  {{view Ember.Select contentBinding="taco_rules" optionValuePath="content.id" optionLabelPath="content.description" prompt="Select a taco rule" selectionBinding="controller.taco_rule"}}
 .modal-footer
   <button class='btn btn-danger' {{action cancelTacoPoint target="view"}}> Cancel</button>
   <button class='btn btn-success' id='add-taco-point' {{action addTacoRule target="controller"}}> Add Taco Point</button>

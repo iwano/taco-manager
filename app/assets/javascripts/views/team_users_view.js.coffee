@@ -1,6 +1,6 @@
-TacoManager.UsersView = Em.View.extend(
+TacoManager.TeamUsersView = Em.View.extend(
 
-  templateName: "users_view"
+  templateName: "team_users_view"
 
   onClick: (obj)->
     user = TacoManager.User.find obj.get('id')
