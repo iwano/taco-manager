@@ -1,8 +1,7 @@
 .modal-header
+  <button type="button" class="close" {{action cancelTacoPoint target="view"}}>&times;</button>
   %h2
     {{name}}
-  %span.taco-points-label
-    {{user.current_tacopoints}}
 
 .modal-body
   Add a
@@ -13,6 +12,10 @@
     {{user.name}}
   %h3.app-icon-large What did this bastard do?
   {{view Ember.Select contentBinding="taco_rules" optionValuePath="content.id" optionLabelPath="content.description" prompt="Select a taco rule" selectionBinding="controller.taco_rule"}}
+
+  %span.taco-points-label
+    {{user.current_tacopoints}}
+
 .modal-footer
-  <button class='btn btn-danger' {{action cancelTacoPoint target="view"}}> Cancel</button>
-  <button class='btn btn-success' id='add-taco-point' {{action addTacoRule target="controller"}}> Add Taco Point</button>
+  <button class='btn btn-inverse' {{action cancelTacoPoint target="view"}}> Close</button>
+  <button class='btn btn-danger' id='add-taco-point' {{action addTacoRule target="controller"}}> Add Taco Point</button>
